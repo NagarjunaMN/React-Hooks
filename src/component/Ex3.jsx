@@ -2,8 +2,12 @@ import React from 'react'
 
 function Ex3() {
   return (
-    <div>
-      Example 3
+    <div className='container'>
+      <div className="row">
+        <div className="col-md-12 text-center">
+          <h3 className="display-3 text-success">Example 3</h3>
+        </div>
+      </div>
     </div>
   )
 }

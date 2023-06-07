@@ -2,8 +2,12 @@ import React from 'react'
 
 function Ex4() {
   return (
-    <div>
-      Example 4
+    <div className='container'>
+      <div className="row">
+        <div className="col-md-12 text-center">
+          <h3 className="display-3 text-success">Example 4</h3>
+        </div>
+      </div>
     </div>
   )
 }
