@@ -16,7 +16,7 @@ function App() {
         <Route path='/' element={< Ex1 />}></Route>
         <Route path='/ex1' element={< Ex1 />}></Route>
         <Route path='/ex2' element={< Ex2  itemsPerPage = {10}/>}></Route>
-        <Route path='/ex3' element={< Ex3 />}></Route>
+        <Route path='/ex3' element={< Ex3 itemsPerPage = {5} />}></Route>
         <Route path='/ex4' element={< Ex4 />}></Route>
         <Route path='/*' element={< Pnf />}></Route>
       </Routes>

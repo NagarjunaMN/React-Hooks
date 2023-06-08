@@ -57,6 +57,14 @@ function Ex2(props) {
     setPageCount(pCount)
   },[posts])
 
+  const handler = (e) => {
+    console.log("item = ",e.selected)
+    const newOffset = Number(e.selected * props.itemsPerPage) % posts.length;
+    console.log("new offset => " ,newOffset)
+    setItemOffset(newOffset)
+  }
+
+
   return (
     <div className='container'>
       <div className="row">
@@ -86,11 +94,18 @@ function Ex2(props) {
       </div>
       <div className="row">
         <div className="col-md-12">
-          <ReactPaginate pageCount={pageCount}
+          <ReactPaginate 
+          pageCount={pageCount}
           className='pagination'
           pageClassName='page-item'
           pageLinkClassName='page-link'
-          
+          nextClassName='page-item'
+          nextLinkClassName='page-link'
+          previousClassName='page-item'
+          previousLinkClassName='page-link'
+          activeClassName='active'
+          activeLinkClassName='active'
+          onPageChange={handler}
              />
         </div>
       </div>
